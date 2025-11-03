@@ -165,9 +165,9 @@ export default function SignupPage({ onSwitchToLogin, onSignupSuccess }: SignupP
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                   className="w-full pl-11 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition appearance-none cursor-pointer"
                 >
-                  <option value="user">User</option>
-                  <option value="merchant">Merchant</option>
-                  <option value="admin">Admin</option>
+                  <option value="user" className='text-black '>User</option>
+                  <option value="merchant" className='text-black '>Merchant</option>
+                  <option value="admin" className='text-black '>Admin</option>
                 </select>
               </div>
             </div>
