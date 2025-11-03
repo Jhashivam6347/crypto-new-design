@@ -3,7 +3,8 @@ name: React App CI/CD
 on:
   push:
     branches:
-      - main  # or master, depending on your branch name
+      - main  # or master
+  workflow_dispatch:  # allows manual trigger
 
 jobs:
   build:
@@ -28,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist   # for Vite, output folder is usually 'dist'
+          publish_dir: ./build   # 👈 change to 'dist' if using Vite
