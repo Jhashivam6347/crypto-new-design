@@ -10,8 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-
+      contents: write  # required for deployment to gh-pages
 
     steps:
       - name: Checkout repository
@@ -32,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build   # 👈 change to 'dist' if using Vite
+          publish_dir: ./dist  # ✅ Vite output folder
