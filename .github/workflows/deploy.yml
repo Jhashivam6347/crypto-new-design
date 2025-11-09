@@ -3,7 +3,7 @@ name: React App CI/CD
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -24,11 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build the React app
+      - name: Build project
         run: npm run build
+        env:
+            VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+            VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist   # 👈 for Vite, not ./build
+          publish_dir: ./dist
