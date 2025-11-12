@@ -48,10 +48,10 @@ export default function AdminDashboard() {
   const COLORS = ['#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'];
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="p-6 space-y-6 ">
+      <div className="md:flex items-center justify-between">
         <h1 className="text-3xl font-bold text-white">Admin Dashboard</h1>
-        <div className="flex items-center space-x-2 text-sm text-gray-400">
+        <div className="flex items-center space-x-2 text-sm text-gray-400 mt-2 md:mt-0">
           <Clock className="w-4 h-4" />
           <span>Last updated: Just now</span>
         </div>

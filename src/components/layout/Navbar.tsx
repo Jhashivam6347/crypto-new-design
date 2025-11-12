@@ -30,9 +30,9 @@ export default function Navbar({ onLogout }: NavbarProps) {
   };
 
   return (
-    <div className="h-16 bg-slate-900 border-b border-slate-800 flex items-center justify-between px-6">
-      <div className="flex items-center space-x-4">
-        <h1 className="text-xl font-semibold text-white">Welcome back, {username}</h1>
+    <div className="h-16 fixed top-0 ps-10 md:ps-6 w-full z-40 md:[position:unset] bg-slate-900 border-b border-slate-800 flex items-center justify-between px-6">
+      <div className=" items-center space-x-4 hidden md:flex">
+        <h1 className="text-xl font-semibold text-white ">Welcome back, {username}</h1>
       </div>
 
       <div className="flex items-center space-x-4">
@@ -85,7 +85,7 @@ export default function Navbar({ onLogout }: NavbarProps) {
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full flex items-center justify-center">
               <User className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-medium">{username}</span>
+            <span className="text-white font-medium hidden md:inline-block">{username}</span>
           </button>
 
           {showProfile && (

@@ -83,21 +83,21 @@ export default function TransactionsPage() {
           </button>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="overflow-x-auto w-full">
+          <table className="w-full whitespace-nowrap table-fixed">
             <thead>
               <tr className="text-left text-gray-400 text-sm border-b border-slate-700">
-                <th className="pb-3 pr-4">
+                <th className="pb-3 pr-4 min-w-10 whitespace-nowrap inline-block">
                   <button className="flex items-center space-x-1 hover:text-white">
                     <span>Transaction ID</span>
                     <ArrowUpDown className="w-4 h-4" />
                   </button>
                 </th>
-                <th className="pb-3 pr-4">Type</th>
-                <th className="pb-3 pr-4">Currency</th>
-                <th className="pb-3 pr-4">Amount</th>
-                <th className="pb-3 pr-4">Status</th>
-                <th className="pb-3">Date</th>
+                <th className="pb-3 pr-4 min-w-10 whitespace-nowrap inline-block">Type</th>
+                <th className="pb-3 pr-4 min-w-10 whitespace-nowrap inline-block">Currency</th>
+                <th className="pb-3 pr-4 min-w-10 whitespace-nowrap inline-block">Amount</th>
+                <th className="pb-3 pr-4 min-w-10 whitespace-nowrap inline-block">Status</th>
+                <th className="pb-3 min-w-5">Date</th>
               </tr>
             </thead>
             <tbody className="text-white">

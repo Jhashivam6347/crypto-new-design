@@ -118,7 +118,7 @@ function AppContent() {
       <Sidebar currentPage={currentPage} onPageChange={setCurrentPage} role={profile.role} />
       <div className="flex-1 flex flex-col">
         <Navbar onLogout={handleLogout} />
-        <main className="flex-1 overflow-y-auto">{renderPage()}</main>
+        <main className="flex-1 overflow-y-auto md:pt-0 pt-20">{renderPage()}</main>
       </div>
     </div>
   );
