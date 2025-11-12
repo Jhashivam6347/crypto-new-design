@@ -53,7 +53,7 @@ export default function Navbar({ onLogout }: NavbarProps) {
           </button>
 
           {showNotifications && (
-            <div className="absolute right-0 mt-2 w-80 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-50">
+            <div className="md:absolute fixed top-16 right-[50%] translate-x-[50%] md:translate-x-0 md:top-[unset]  md:right-0 mt-2 w-80 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-50">
               <div className="p-4 border-b border-slate-700">
                 <h3 className="font-semibold text-white">Notifications</h3>
               </div>
@@ -89,7 +89,7 @@ export default function Navbar({ onLogout }: NavbarProps) {
           </button>
 
           {showProfile && (
-            <div className="absolute right-0 mt-2 w-48 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-50">
+            <div className="absolute left-0 right-auto md:right-0 md:left-auto mt-2 w-48 bg-slate-800 border border-slate-700 rounded-lg shadow-xl z-50">
               <div className="p-3 border-b border-slate-700">
                 <p className="text-white font-medium">{username}</p>
                 <p className="text-gray-400 text-xs capitalize">{role}</p>
